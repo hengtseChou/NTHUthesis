@@ -13,18 +13,19 @@ This project is a fork of [elsa-lab/NTHUthesis](https://github.com/elsa-lab/NTHU
   - `lemma` (引理)
   - `example` (例)
   - `proof` (證明)
-- Currently the bibliography style is customized as [agsm style](https://www.bibtex.com/s/bibliography-style-harvard-agsm/) with biblatex. One may modify it as needed at the top of  `main.tex`.
+- Currently the bibliography style is customized as [agsm style](https://www.bibtex.com/s/bibliography-style-harvard-agsm/) with biblatex. One may modify it as needed at the top of `main.tex`.
 - We use arabic numbers in the cover page.
 
-# Usage
+## Usage
 
 Download the .zip file, navigate to projects page at overleaf -> New Project -> Upload Project -> Select a .zip file.
 
-# Example
+Make sure you set the compiler to `XeLaTeX` in the menu.
+
+## Example
 
 Check out `example/thesis.pdf`. Note that all the content are dummy content generated via ChatGPT.
 
 ## Overleaf template
 
 - Link: to be updated.
-- Make sure you set the compiler to `XeLaTeX` in the menu.
