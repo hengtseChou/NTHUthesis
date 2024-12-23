@@ -1,0 +1,23 @@
+\appendix
+\chapter*{附錄（程式碼）}
+\addcontentsline{toc}{chapter}{附錄（程式碼）}
+
+以下是用 Python 編寫的數據清理代碼：
+
+\begin{verbatim}
+import pandas as pd
+
+# 讀取數據集
+data = pd.read_csv('dataset.csv')
+
+# 填補缺失值
+data.fillna(method='ffill', inplace=True)
+
+# 標準化數據
+from sklearn.preprocessing import StandardScaler
+scaler = StandardScaler()
+data_scaled = scaler.fit_transform(data)
+
+# 保存處理後的數據
+pd.DataFrame(data_scaled, columns=data.columns).to_csv('processed_dataset.csv', index=False)
+\end{verbatim}

@@ -1,0 +1,104 @@
+\documentclass[master]{./assets/NTHUthesis}
+\usepackage{fontspec}
+\usepackage[BoldFont, SlantFont]{xeCJK}   
+\setCJKmainfont{TW-Kai}         % 標楷體
+
+% ---------------------------------------------- %
+%                    packages                    %
+% ---------------------------------------------- %
+
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{thmtools}
+\usepackage{tocbibind}
+\usepackage{bm}                 % bold math symbols
+\usepackage{lscape}             % landscape environment
+\usepackage{booktabs, multirow} % tables
+\usepackage{tabularx}           % tables with adjusted columns
+\usepackage{graphicx}           % figures
+\usepackage[ruled]{algorithm2e} % algorithms, list of algorithms
+\usepackage{appendix}
+
+% ---------------------------------------------- %
+%                biblatex settings               %
+% ---------------------------------------------- %
+
+% the following code are setup for agsm format
+% you may also switch for apa format by changing into
+% \usepackage[style=apa]{biblatex}
+\usepackage[style=authoryear, dashed=false]{biblatex}
+\usepackage{xcolor}
+\usepackage{etoolbox}
+\addbibresource{references.bib}
+
+% formatting references
+\renewbibmacro{in:}{}
+\DeclareFieldFormat[article]{pages}{#1}
+\DeclareFieldFormat[book]{pages}{#1}
+\renewbibmacro*{volume+number+eid}{%
+  \printfield{volume}% Print volume
+  \setunit{}% Remove the dot (default separator)
+  \printfield{number}% Print number
+  \setunit{\addcomma\space}% Add separator for eid if needed
+  \printfield{eid}}
+\DeclareFieldFormat[article]{volume}{\textbf{#1}}
+\DeclareFieldFormat[book]{volume}{\textbf{#1}}
+\DeclareFieldFormat[article]{number}{(#1)}
+\DeclareFieldFormat[book]{number}{(#1)}
+
+% formatting citations
+\DeclareCiteCommand{\cite}
+  {\usebibmacro{prenote}}
+  {\bibhyperref{\textcolor{blue}{\printnames{author} (\printfield{year})}}}
+  {\multicitedelim}
+  {\usebibmacro{postnote}}
+
+% ---------------------------------------------- %
+%                basic information               %
+% ---------------------------------------------- %
+
+% these information will be used for making cover page
+\titleZH{這是一個中文標題}
+\titleEN{This an English title}
+\instituteZH{這是一個學系某班}
+\studentID{123456789}
+\studentZH{你的名字}
+\studentEN{Your Name}
+\advisorZH{他/她的名字}
+\advisorEN{His/Her Name}
+\yearZH{110}
+\monthZH{6}
+
+% ---------------------------------------------- %
+%               thesis begins here               %
+% ---------------------------------------------- %
+
+\begin{document}
+\makecover
+\pagenumbering{roman}
+\input{1_abstracts}
+\input{2_acknowlegment}
+\newcommand{\maketoc}{ % adjust table of contents as needed
+    \tableofcontents
+    \clearpage
+    \listoffigures
+    \listoftables
+    \clearpage
+}
+\maketoc
+\pagenumbering{arabic}
+
+% modify as you need
+\input{3_introduction}
+\input{4_background}
+\input{5_methods}
+\input{6_conclusion}
+\input{7_appendix}
+
+% ---------------------------------------------- %
+%                   references                   %
+% ---------------------------------------------- %
+
+\renewcommand{\bibname}{參考文獻}
+\printbibliography[heading=bibintoc]
+
+\end{document}
