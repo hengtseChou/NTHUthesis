@@ -1,6 +1,6 @@
 \documentclass[master]{./assets/NTHUthesis}
 \usepackage{fontspec}
-\usepackage[BoldFont, SlantFont]{xeCJK}   
+\usepackage[BoldFont, SlantFont]{xeCJK}
 \setCJKmainfont{TW-Kai}         % 標楷體
 
 % ---------------------------------------------- %
@@ -39,7 +39,7 @@
   \setunit{}% Remove the dot (default separator)
   \printfield{number}% Print number
   \setunit{\addcomma\space}% Add separator for eid if needed
-  \printfield{eid}}
+\printfield{eid}}
 \DeclareFieldFormat[article]{volume}{\textbf{#1}}
 \DeclareFieldFormat[book]{volume}{\textbf{#1}}
 \DeclareFieldFormat[article]{number}{(#1)}
@@ -47,10 +47,10 @@
 
 % formatting citations
 \DeclareCiteCommand{\cite}
-  {\usebibmacro{prenote}}
-  {\bibhyperref{\textcolor{blue}{\printnames{author} (\printfield{year})}}}
-  {\multicitedelim}
-  {\usebibmacro{postnote}}
+{\usebibmacro{prenote}}
+{\bibhyperref{\textcolor{blue}{\printnames{author} (\printfield{year})}}}
+{\multicitedelim}
+{\usebibmacro{postnote}}
 
 % ---------------------------------------------- %
 %                basic information               %
@@ -78,11 +78,11 @@
 \input{1_abstracts}
 \input{2_acknowlegment}
 \newcommand{\maketoc}{ % adjust table of contents as needed
-    \tableofcontents
-    \clearpage
-    \listoffigures
-    \listoftables
-    \clearpage
+  \tableofcontents
+  \clearpage
+  \listoffigures
+  \listoftables
+  \clearpage
 }
 \maketoc
 \pagenumbering{arabic}

@@ -7,19 +7,19 @@
 數據處理是本研究的重要步驟，主要包括數據清理、標準化和特徵提取。以下是本研究使用的數據摘要表：
 
 \begin{table}[htbp]
-\centering
-\begin{tabularx}{\textwidth}{@{}lXX@{}}
-\toprule
-\textbf{Feature Name} & \textbf{Type} & \textbf{Description} \\ 
-\midrule
-Age                   & Numerical      & Participant's age (in years). \\ 
-Gender                & Categorical    & Gender of the participant (Male/Female). \\ 
-Income                & Numerical      & Annual income (in USD). \\ 
-Purchase Intent       & Categorical    & Whether there is purchase intent (Yes/No). \\ 
-\bottomrule
-\end{tabularx}
-\caption{Summary of dataset features}
-\label{tab:data_summary}
+  \centering
+  \begin{tabularx}{\textwidth}{@{}lXX@{}}
+    \toprule
+    \textbf{Feature Name} & \textbf{Type} & \textbf{Description} \\
+    \midrule
+    Age                   & Numerical      & Participant's age (in years). \\
+    Gender                & Categorical    & Gender of the participant (Male/Female). \\
+    Income                & Numerical      & Annual income (in USD). \\
+    Purchase Intent       & Categorical    & Whether there is purchase intent (Yes/No). \\
+    \bottomrule
+  \end{tabularx}
+  \caption{Summary of dataset features}
+  \label{tab:data_summary}
 \end{table}
 
 \section{模型構建}
@@ -27,20 +27,20 @@ Purchase Intent       & Categorical    & Whether there is purchase intent (Yes/N
 模型構建基於先進的機器學習算法。以下展示了一個通用的模型訓練過程的算法描述：
 
 \begin{algorithm}[htbp]
-\caption{模型訓練算法}
-\label{alg:model_training}
-\KwIn{Dataset \( D = \{(x_i, y_i)\}_{i=1}^n \), learning rate \( \eta \), number of iterations \( T \)}
-\KwOut{Trained model parameters \( \theta \)}
+  \caption{模型訓練算法}
+  \label{alg:model_training}
+  \KwIn{Dataset \( D = \{(x_i, y_i)\}_{i=1}^n \), learning rate \( \eta \), number of iterations \( T \)}
+  \KwOut{Trained model parameters \( \theta \)}
 
-Initialize model parameters \( \theta \)\;
-\For{\( t = 1 \) \KwTo \( T \)}{
+  Initialize model parameters \( \theta \)\;
+  \For{\( t = 1 \) \KwTo \( T \)}{
     \For{\( (x_i, y_i) \in D \)}{
-        Compute prediction \( \hat{y}_i = f(x_i; \theta) \)\;
-        Update parameters \( \theta \leftarrow \theta - \eta \cdot \nabla_\theta \mathcal{L}(\hat{y}_i, y_i) \)\;
+      Compute prediction \( \hat{y}_i = f(x_i; \theta) \)\;
+      Update parameters \( \theta \leftarrow \theta - \eta \cdot \nabla_\theta \mathcal{L}(\hat{y}_i, y_i) \)\;
     }
-}
-\Return \( \theta \;
-\)
+  }
+  \Return \( \theta \;
+  \)
 \end{algorithm}
 
 \section{實驗設計}
@@ -48,10 +48,10 @@ Initialize model parameters \( \theta \)\;
 為了驗證模型的性能，我們設計了一個簡單的實驗，並使用數據可視化來呈現結果。圖 \ref{fig:example_figure} 展示了一個假設的數據分佈圖。
 
 \begin{figure}[htbp]
-\centering
-\includegraphics[width=0.4\textwidth]{example-image-a}
-\caption{數據分佈圖示例}
-\label{fig:example_figure}
+  \centering
+  \includegraphics[width=0.4\textwidth]{example-image-a}
+  \caption{數據分佈圖示例}
+  \label{fig:example_figure}
 \end{figure}
 
 本章詳細介紹了數據處理、模型構建和實驗設計的過程。後續章節將展示這些方法的應用結果及其對研究問題的解決。
