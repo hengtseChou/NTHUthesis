@@ -2,7 +2,7 @@
 
 This project is a fork of [elsa-lab/NTHUthesis](https://github.com/elsa-lab/NTHUthesis), with the following major changes:
 
-- Switched the compiler and the relevsnt packages from `pdfLaTeX` to `XeLaTeX`.
+- Switched the compiler and the relevent packages from `pdfLaTeX` to `XeLaTeX`.
 - Dropped `zhmode` completely, as zw-TW is now the default setup.
 - Factored `thesis_main.tex` into seperate `.tex` files, allows easier navigation when editing.
 - Implemented/Overwrited mathematical environments with zw-TW, including:
